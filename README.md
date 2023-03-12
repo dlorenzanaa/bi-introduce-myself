@@ -11,6 +11,7 @@ This readme file contains a list of SQL queries to be executed on the specified 
 
 Genere un SELECT a la tabla [Person]. [Person].
 
+```sql
 SELECT
 
 *
@@ -18,11 +19,12 @@ SELECT
 FROM
 
 [Person]. [Person]
-
+```
 
 
 Genere un SELECT a la tabla [Person]. [Person], únicamente de los campos BusinessEntityID, PersonType, FirstName y LastName.
 
+```sql
 SELECT
 
 a.BusinessEntityID, a.PersonType, a.FirstName, a.LastName
@@ -30,6 +32,7 @@ a.BusinessEntityID, a.PersonType, a.FirstName, a.LastName
 FROM
 
 [Person]. [Person] AS a
+```
 
 Genere un query con los mismos campos del punto número 2 donde PersonType sea igual a EM.
 
