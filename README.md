@@ -171,7 +171,7 @@ aTerritoryID IS NOT NULL
 
 Genere una consulta a la tabla [Sales]. [SalesPerson] que indique el valor máximo y el valor mínimo del campo Bonus, los nuevos campos deben llamarse maximo y minimo respectivamente.
 
-```
+```sql
 SELECT
 
 MAX(Bonus) AS Maximo,
