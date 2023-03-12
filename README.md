@@ -1,4 +1,4 @@
-# Coleccion de ejemplo SQL
+# Coleccion de ejemplos SQL
 
 ## Resumen
 
