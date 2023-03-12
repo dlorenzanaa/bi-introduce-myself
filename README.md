@@ -1,6 +1,6 @@
-# sql-examples
+# Coleccion de ejemplo SQL
 
-## subtitulo
+## Resumen
 
 "Recursos de SQL para desarrolladores de todos los niveles. Explore consultas de ejemplo para dominar las consultas SELECT, INSERT, UPDATE y DELETE, como esta consulta que utiliza JOIN para combinar datos de dos tablas diferentes y mostrar el producto más popular".
 
@@ -104,7 +104,7 @@ ORDER BY
 COUNT(a.JobTitle) DESC
 ```
 
-##Query 9
+## Query 9
 
 Realice una consulta de la tabla [HumanResources]. [Employee] la cual indique el promedio del campo VacationHours donde el JobTitle sea Production Technician - WC50, el campo resultante del promedio debe llamarse Promedio.
 
