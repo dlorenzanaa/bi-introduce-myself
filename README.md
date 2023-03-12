@@ -36,6 +36,7 @@ FROM
 
 Genere un query con los mismos campos del punto número 2 donde PersonType sea igual a EM.
 
+```sql
 SELECT
 
 a.BusinessEntityID, a.PersonType, a.FirstName, a.LastName
@@ -47,9 +48,11 @@ FROM
 WHERE
 
 a.PersonType = 'EM'
+```
 
 Genere una consulta sobre la tabla [HumanResources]. [Employee] que muestre BusinessEntityID, NationalIDNumber y JobTitle, ordene los registros de mayor a menor por el campo BusinessEntityID.
 
+```sql
 SELECT
 
 a.BusinessEntityID, a.NationalIDNumber, a.JobTitle
@@ -61,6 +64,7 @@ FROM
 ORDER BY
 
 a.BusinessEntityID DESC
+```
 
 Genere una consulta sobre la tabla [HumanResources].[Employee] que muestre las JobTitle únicos, el campo JobTitle debe registrar en la consulta como Unicos.
 
@@ -72,6 +76,7 @@ FROM
 
 Genere una consulta para todos los campos de la tabla [HumanResources]. [Employee] donde el BusinessEntityID sea mayor a 10.
 
+```sql
 SELECT
 
 *
@@ -83,9 +88,11 @@ FROM
 WHERE
 
 a.BusinessEntityID > 10
+```
 
 Genere una consulta de todos los campos para la tabla [HumanResources]. [Employee] donde el JobTitle sea Sales Representative y el Gender F.
 
+```sql
 SELECT
 
 *
@@ -97,9 +104,11 @@ FROM
 WHERE
 
 a.JobTitle = 'Sales Representative' AND a.Gender = 'F'
+```
 
 Genere una consulta que permita obtener la cantidad por JobTitle. La consulta debe mostrar el campo JobTitle seguido de la cantidad que hay por dicho JobTitle, ordene de mayor a menor.
 
+```sql
 SELECT
 
 a.JobTitle,
@@ -117,11 +126,13 @@ a.JobTitle
 ORDER BY
 
 COUNT(a.JobTitle) DESC
+```
 
 
 
 Realice una consulta de la tabla [HumanResources]. [Employee] la cual indique el promedio del campo VacationHours donde el JobTitle sea Production Technician - WC50, el campo resultante del promedio debe llamarse Promedio.
 
+```sql
 SELECT AVG (a.VacationHours) AS Promedio
 
 FROM
@@ -132,16 +143,21 @@ WHERE
 
 a.JobTitle = 'Production Technician - WC50'
 
+```
+
 Realice una consulta de la tabla [Sales]. [SalesPerson] la cual indique la suma total del campo SalesYTD, el nuevo campo resultante debe llamarse SumaTotal.
 
+```sql
 SELECT SUM(a.SalesYTD) AS SumaTotal
 
 FROM
 
 [Sales]. [SalesPerson] AS a
+```
 
 Realice una consulta de la tabla [Sales]. [SalesPerson] la cual indique la suma total del campo SalesYTD donde el campo TerritoryID no sea NULL, el nuevo campo resultante debe llamarse SumaTotal.
 
+```sql
 SELECT SUM(a.SalesYTD) AS SumaTotal
 
 FROM
@@ -151,11 +167,11 @@ FROM
 WHERE
 
 aTerritoryID IS NOT NULL
-
-
+```
 
 Genere una consulta a la tabla [Sales]. [SalesPerson] que indique el valor máximo y el valor mínimo del campo Bonus, los nuevos campos deben llamarse maximo y minimo respectivamente.
 
+```
 SELECT
 
 MAX(Bonus) AS Maximo,
@@ -165,3 +181,4 @@ MIN(Bonus) AS Minimo
 FROM
 
 [Sales]. [SalesPerson]
+```
