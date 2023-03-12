@@ -2,7 +2,7 @@
 
 ## Resumen
 
-"Recursos de SQL para desarrolladores de todos los niveles. Explore consultas de ejemplo para dominar las consultas SELECT, INSERT, UPDATE y DELETE, como esta consulta que utiliza JOIN para combinar datos de dos tablas diferentes y mostrar el producto más popular".
+Recursos de SQL para desarrolladores de todos los niveles. Explore consultas de ejemplo para dominar las consultas SELECT, INSERT, UPDATE y DELETE, como esta consulta que utiliza JOIN para combinar datos de dos tablas diferentes y mostrar el producto más popular.
 
 SQL Queries
 This readme file contains a list of SQL queries to be executed on the specified database tables.
