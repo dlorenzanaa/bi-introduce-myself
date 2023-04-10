@@ -7,6 +7,8 @@ Recursos de SQL para desarrolladores de todos los niveles. Explore consultas de 
 SQL Queries
 This readme file contains a list of SQL queries to be executed on the specified database tables.
 
+
+
 ## Query 1
 
 Genere un SELECT a la tabla [Person]. [Person].
