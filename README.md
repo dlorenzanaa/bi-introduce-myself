@@ -1,153 +1,76 @@
-# Coleccion de ejemplos SQL
+# Power BI y SQL Server
 
-## Resumen
+Este repositorio contiene ejemplos y documentación relacionados con Power BI y SQL Server. Power BI es una herramienta de visualización de datos desarrollada por Microsoft que permite crear informes y paneles interactivos. SQL Server es un sistema de gestión de bases de datos relacionales también desarrollado por Microsoft.
 
-Recursos de SQL para desarrolladores de todos los niveles. Explore consultas de ejemplo para dominar las consultas SELECT, INSERT, UPDATE y DELETE, como esta consulta que utiliza JOIN para combinar datos de dos tablas diferentes y mostrar el producto más popular.
+## Ejemplos de SQL más usados
 
-SQL Queries
-This readme file contains a list of SQL queries to be executed on the specified database tables.
+A continuación se presentan algunos ejemplos de SQL Server que se utilizan con frecuencia:
 
+* SELECT: se utiliza para seleccionar columnas específicas de una tabla.
+* FROM: se utiliza para especificar la tabla desde la cual se seleccionan los datos.
+* WHERE: se utiliza para filtrar los datos que cumplen ciertas condiciones.
+* ORDER BY: se utiliza para ordenar los datos en orden ascendente o descendente.
+* GROUP BY: se utiliza para agrupar los datos según una o varias columnas.
+* JOIN: se utiliza para combinar datos de dos o más tablas.
+* INSERT: se utiliza para insertar datos en una tabla.
+* UPDATE: se utiliza para actualizar datos en una tabla.
+* DELETE: se utiliza para eliminar datos de una tabla.
+* CREATE: se utiliza para crear objetos en la base de datos, como tablas y vistas.
+* ALTER: se utiliza para modificar objetos existentes en la base de datos, como tablas y vistas.
+* DROP: se utiliza para eliminar objetos de la base de datos, como tablas y vistas.
+* COMMIT: se utiliza para confirmar una transacción.
+* ROLLBACK: se utiliza para deshacer una transacción.
 
+## Ejemplos de DAX más usados
 
-## Query 1
+A continuación se presentan algunos ejemplos de fórmulas de DAX (Data Analysis Expressions) que se utilizan con frecuencia en Power BI:
 
-Genere un SELECT a la tabla [Person]. [Person].
+* FILTER: se utiliza para filtrar un conjunto de datos en función de una o varias condiciones.
+* SUMMARIZE: se utiliza para agregar y resumir datos en función de una o varias columnas.
+* CALCULATED COLUMN: se utiliza para crear una columna calculada basada en una fórmula de DAX.
+* CALCULATED TABLE: se utiliza para crear una tabla calculada basada en una fórmula de DAX.
+* RELATED: se utiliza para recuperar un valor de otra tabla relacionada.
+* AVERAGE: se utiliza para calcular el promedio de los valores de una columna.
+* COUNT: se utiliza para contar el número de filas en una tabla.
+* MAX: se utiliza para encontrar el valor máximo en una columna.
+* MIN: se utiliza para encontrar el valor mínimo en una columna.
 
-```sql
-SELECT
-*
-FROM
-[Person]. [Person]
-```
+## Instrucciones DML, DDL, TCL y DCL
 
-## Query 2
+SQL Server utiliza cuatro tipos principales de instrucciones: DML (Data Manipulation Language), DDL (Data Definition Language), TCL (Transaction Control Language) y DCL (Data Control Language).
 
-Genere un SELECT a la tabla [Person]. [Person], únicamente de los campos BusinessEntityID, PersonType, FirstName y LastName.
+## DML
+Las instrucciones DML se utilizan para manipular los datos en las tablas. Algunos ejemplos de instrucciones DML incluyen:
 
-```sql
-SELECT
-a.BusinessEntityID, a.PersonType, a.FirstName, a.LastName
-FROM
-[Person]. [Person] AS a
-```
-## Query 3
+* INSERT: se utiliza para insertar nuevos datos en una tabla.
+* UPDATE: se utiliza para actualizar datos existentes en una tabla.
+* DELETE: se utiliza para eliminar datos existentes de una tabla.
+* SELECT: se utiliza para seleccionar datos de una tabla.
 
-Genere un query con los mismos campos del punto número 2 donde PersonType sea igual a EM.
+## DDL
 
-```sql
-SELECT
-a.BusinessEntityID, a.PersonType, a.FirstName, a.LastName
-FROM
-[Person]. [Person] AS a
-WHERE
-a.PersonType = 'EM'
-```
-## Query 4
+Las instrucciones DDL se utilizan para definir la estructura de la base de datos. Algunos ejemplos de instrucciones
 
-Genere una consulta sobre la tabla [HumanResources]. [Employee] que muestre BusinessEntityID, NationalIDNumber y JobTitle, ordene los registros de mayor a menor por el campo BusinessEntityID.
+DDL se refiere a Data Definition Language y se utiliza para definir la estructura de la base de datos, incluyendo la creación, modificación y eliminación de objetos de base de datos como tablas, índices, restricciones y procedimientos almacenados. Algunos ejemplos de instrucciones DDL incluyen:
 
-```sql
-SELECT
-a.BusinessEntityID, a.NationalIDNumber, a.JobTitle
-FROM
-[HumanResources]. [Employee] AS a
-ORDER BY
-a.BusinessEntityID DESC
-```
-## Query 5
+* CREATE: se utiliza para crear objetos de base de datos, como tablas, vistas, procedimientos almacenados, índices y restricciones.
+* ALTER: se utiliza para modificar la estructura de objetos de base de datos existentes.
+* DROP: se utiliza para eliminar objetos de base de datos.
 
-Genere una consulta sobre la tabla [HumanResources].[Employee] que muestre las JobTitle únicos, el campo JobTitle debe registrar en la consulta como Unicos.
+## TCL
 
-```sql
-SELECT  DISTINCT a.JobTitle
-FROM
-[HumanResources].[Employee] AS a
-```
+TCL se refiere a Transaction Control Language y se utiliza para controlar las transacciones en la base de datos. Las transacciones son bloques de código que se ejecutan como una sola unidad lógica de trabajo y que pueden ser revertidas en caso de errores o fallas. Algunos ejemplos de instrucciones TCL incluyen:
 
-## Query 6
+* COMMIT: se utiliza para confirmar una transacción y hacer que los cambios sean permanentes.
+* ROLLBACK: se utiliza para deshacer una transacción y revertir los cambios realizados en caso de errores o fallas.
 
-Genere una consulta para todos los campos de la tabla [HumanResources]. [Employee] donde el BusinessEntityID sea mayor a 10.
+## DCL
 
-```sql
-SELECT
-*
-FROM
-[HumanResources]. [Employee] AS a
-WHERE
-a.BusinessEntityID > 10
-```
+DCL se refiere a Data Control Language y se utiliza para definir los permisos y la seguridad en la base de datos. Algunos ejemplos de instrucciones DCL incluyen:
 
-## Query 7
+* GRANT: se utiliza para otorgar permisos a usuarios y roles de usuario en la base de datos.
+* REVOKE: se utiliza para revocar permisos a usuarios y roles de usuario en la base de datos.
 
-Genere una consulta de todos los campos para la tabla [HumanResources]. [Employee] donde el JobTitle sea Sales Representative y el Gender F.
+## Contribuciones
 
-```sql
-SELECT
-*
-FROM
-[HumanResources]. [Employee] AS a
-WHERE
-a.JobTitle = 'Sales Representative' AND a.Gender = 'F'
-```
-
-## Query 8
-
-Genere una consulta que permita obtener la cantidad por JobTitle. La consulta debe mostrar el campo JobTitle seguido de la cantidad que hay por dicho JobTitle, ordene de mayor a menor.
-
-```sql
-SELECT
-a.JobTitle,
-COUNT(a.JobTitle) AS Cantidad
-FROM
-[HumanResources]. [Employee] AS a
-GROUP BY
-a.JobTitle
-ORDER BY
-COUNT(a.JobTitle) DESC
-```
-
-## Query 9
-
-Realice una consulta de la tabla [HumanResources]. [Employee] la cual indique el promedio del campo VacationHours donde el JobTitle sea Production Technician - WC50, el campo resultante del promedio debe llamarse Promedio.
-
-```sql
-SELECT AVG (a.VacationHours) AS Promedio
-FROM
-[HumanResources]. [Employee] AS a
-WHERE
-a.JobTitle = 'Production Technician - WC50'
-```
-
-## Query 10
-
-Realice una consulta de la tabla [Sales]. [SalesPerson] la cual indique la suma total del campo SalesYTD, el nuevo campo resultante debe llamarse SumaTotal.
-
-```sql
-SELECT SUM(a.SalesYTD) AS SumaTotal
-FROM
-[Sales]. [SalesPerson] AS a
-```
-
-## Query 11
-
-Realice una consulta de la tabla [Sales]. [SalesPerson] la cual indique la suma total del campo SalesYTD donde el campo TerritoryID no sea NULL, el nuevo campo resultante debe llamarse SumaTotal.
-
-```sql
-SELECT SUM(a.SalesYTD) AS SumaTotal
-FROM
-[Sales]. [SalesPerson] AS a
-WHERE
-aTerritoryID IS NOT NULL
-```
-
-## Query 12
-
-Genere una consulta a la tabla [Sales]. [SalesPerson] que indique el valor máximo y el valor mínimo del campo Bonus, los nuevos campos deben llamarse maximo y minimo respectivamente.
-
-```sql
-SELECT
-MAX(Bonus) AS Maximo,
-MIN(Bonus) AS Minimo
-FROM
-[Sales]. [SalesPerson]
-```
+¡Gracias por tu interés en contribuir a este repositorio! Si deseas contribuir con ejemplos adicionales de SQL Server y Power BI, por favor crea una rama y haz una solicitud de extracción. ¡Agradecemos tu ayuda!
