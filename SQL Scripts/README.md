@@ -118,6 +118,66 @@ Con esta instrucción, se elimina el inicio de sesión de usuario llamado "Vende
 
 Estos son solo algunos ejemplos de instrucciones DCL en SQL Server. La gestión de permisos y la seguridad son fundamentales en cualquier proyecto de bases de datos, por lo que es importante conocer bien estas instrucciones y cómo aplicarlas correctamente.
 
+## JOINs
+
+Los JOINs se utilizan para combinar datos de dos o más tablas en una consulta. SQL Server admite varios tipos de JOINs, incluidos los siguientes:
+
+INNER JOIN: devuelve solo los registros que tienen coincidencias en ambas tablas. Por ejemplo:
+
+```sql
+SELECT Orders.OrderID, Customers.CustomerName
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+```
+
+Esta consulta devuelve los ID de pedido y los nombres de los clientes que han realizado pedidos, es decir, solo los registros que tienen coincidencias tanto en la tabla "Orders" como en la tabla "Customers".
+
+LEFT JOIN: devuelve todos los registros de la tabla izquierda (primera tabla mencionada en la consulta) y los registros coincidentes de la tabla derecha (segunda tabla mencionada en la consulta). Si no hay coincidencias en la tabla derecha, se devolverá NULL. Por ejemplo:
+
+```sql
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+```
+
+Esta consulta devuelve los nombres de todos los clientes y sus ID de pedido correspondientes (si han realizado algún pedido), incluidos los clientes que no han realizado ningún pedido.
+
+RIGHT JOIN: es similar al LEFT JOIN, pero devuelve todos los registros de la tabla derecha y los registros coincidentes de la tabla izquierda. Si no hay coincidencias en la tabla izquierda, se devolverá NULL. Por ejemplo:
+
+```sql
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+RIGHT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+```
+
+Esta consulta devuelve los ID de pedido y los nombres de los clientes correspondientes (si existen) de todos los pedidos realizados, incluidos los pedidos que no tienen clientes asociados.
+
+## UNIONs
+
+Los UNIONs se utilizan para combinar el resultado de dos o más consultas SELECT en una sola tabla. SQL Server admite dos tipos de UNIONs, incluidos los siguientes:
+
+UNION: combina el resultado de dos o más consultas SELECT en una sola tabla, eliminando duplicados. Por ejemplo:
+
+```sql
+SELECT City, Country FROM Customers
+UNION
+SELECT City, Country FROM Suppliers;
+```
+
+Esta consulta devuelve una lista de ciudades y países de los clientes y proveedores, sin incluir duplicados.
+
+UNION ALL: es similar a UNION, pero no elimina duplicados. Por ejemplo:
+
+```sql
+SELECT City, Country FROM Customers
+UNION ALL
+SELECT City, Country FROM Suppliers;
+```
+
+Esta consulta devuelve una lista de ciudades y países de los clientes y proveedores, incluyendo duplicados.
+
+Estos son solo algunos ejemplos de JOINs y UNIONs en SQL Server. Los JOINs y UNIONs son herramientas importantes para la combinación de datos en una consulta y es importante conocer bien sus diferencias y cómo aplicarlos correctamente.
+
 ## Conclusion
 
 Esperamos que estos ejemplos de scripts de SQL Server utilizando instrucciones DML, DDL, TCL y DCL sean útiles para tus proyectos de bases de datos. Para obtener más información y ejemplos, consulta la documentación oficial de SQL Server de Microsoft.
