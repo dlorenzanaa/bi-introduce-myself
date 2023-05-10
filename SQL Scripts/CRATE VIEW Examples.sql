@@ -11,7 +11,7 @@ SELECT Id, CustomerId, OrderDate, OrderAmount, OrderStatus, PaymentMethod
 FROM Orders;
 
 
-CREATE VIEW OrderDetails 
+CREATE VIEW VW_OrderDetails_BI
 AS 
 SELECT o.Id, o.CustomerId, o.OrderDate, o.OrderAmount, o.OrderStatus, o.PaymentMethod,
        c.FirstName, c.LastName, c.Email, c.PhoneNumber, c.AddressLine1, c.AddressLine2,
