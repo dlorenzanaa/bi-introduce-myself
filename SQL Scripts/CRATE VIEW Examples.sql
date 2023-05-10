@@ -9,3 +9,12 @@ CREATE VIEW VW_OrderInfo_BI
 AS 
 SELECT Id, CustomerId, OrderDate, OrderAmount, OrderStatus, PaymentMethod
 FROM Orders;
+
+
+CREATE VIEW OrderDetails 
+AS 
+SELECT o.Id, o.CustomerId, o.OrderDate, o.OrderAmount, o.OrderStatus, o.PaymentMethod,
+       c.FirstName, c.LastName, c.Email, c.PhoneNumber, c.AddressLine1, c.AddressLine2,
+       c.City, c.State, c.PostalCode
+FROM Orders o
+JOIN Customers c ON o.CustomerId = c.Id;
