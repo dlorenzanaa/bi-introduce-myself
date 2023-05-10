@@ -12,9 +12,11 @@ sql
 ```sql
 INSERT INTO Ventas (Fecha, Producto, Cantidad, Precio) 
 VALUES ('2023-05-09', 'Laptop', 10, 1500.00);
+```
+
 UPDATE: se utiliza para modificar datos existentes en una tabla. Por ejemplo:
-sql
-Copy code
+
+```sql
 UPDATE Ventas 
 SET Precio = 1600.00 
 WHERE Producto = 'Laptop';
