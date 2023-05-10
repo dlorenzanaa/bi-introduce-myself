@@ -1,153 +1,121 @@
-# Coleccion de ejemplos SQL
+# Ejemplos de SQL Server
 
-## Resumen
+En este repositorio encontrarás ejemplos de scripts de SQL Server utilizando diferentes instrucciones. A continuación, se presentan algunos ejemplos de scripts utilizando instrucciones DML, DDL, TCL y DCL.
 
-Recursos de SQL para desarrolladores de todos los niveles. Explore consultas de ejemplo para dominar las consultas SELECT, INSERT, UPDATE y DELETE, como esta consulta que utiliza JOIN para combinar datos de dos tablas diferentes y mostrar el producto más popular.
+## Instrucciones DML
 
-SQL Queries
-This readme file contains a list of SQL queries to be executed on the specified database tables.
+DML se refiere a Data Manipulation Language y se utiliza para manipular los datos en las tablas de la base de datos. A continuación, se presentan algunos ejemplos de instrucciones DML:
 
-
-
-## Query 1
-
-Genere un SELECT a la tabla [Person]. [Person].
+INSERT: se utiliza para insertar nuevos datos en una tabla. Por ejemplo:
+sql
 
 ```sql
-SELECT
-*
-FROM
-[Person]. [Person]
+INSERT INTO Ventas (Fecha, Producto, Cantidad, Precio) 
+VALUES ('2023-05-09', 'Laptop', 10, 1500.00);
+UPDATE: se utiliza para modificar datos existentes en una tabla. Por ejemplo:
+sql
+Copy code
+UPDATE Ventas 
+SET Precio = 1600.00 
+WHERE Producto = 'Laptop';
 ```
 
-## Query 2
+## Instrucciones DDL
 
-Genere un SELECT a la tabla [Person]. [Person], únicamente de los campos BusinessEntityID, PersonType, FirstName y LastName.
+DDL se refiere a Data Definition Language y se utiliza para definir la estructura de la base de datos, incluyendo la creación, modificación y eliminación de objetos de base de datos como tablas, índices, restricciones y procedimientos almacenados. A continuación, se presentan algunos ejemplos de instrucciones DDL:
+
+CREATE TABLE: se utiliza para crear una nueva tabla en la base de datos. Por ejemplo:
+sql
 
 ```sql
-SELECT
-a.BusinessEntityID, a.PersonType, a.FirstName, a.LastName
-FROM
-[Person]. [Person] AS a
+CREATE TABLE Ventas (
+  ID int NOT NULL PRIMARY KEY,
+  Fecha date NOT NULL,
+  Producto varchar(50) NOT NULL,
+  Cantidad int NOT NULL,
+  Precio money NOT NULL
+);
 ```
-## Query 3
 
-Genere un query con los mismos campos del punto número 2 donde PersonType sea igual a EM.
+ALTER TABLE: se utiliza para modificar la estructura de una tabla existente. Por ejemplo:
 
 ```sql
-SELECT
-a.BusinessEntityID, a.PersonType, a.FirstName, a.LastName
-FROM
-[Person]. [Person] AS a
-WHERE
-a.PersonType = 'EM'
+ALTER TABLE Ventas
+ADD Descuento money NOT NULL DEFAULT 0;
 ```
-## Query 4
 
-Genere una consulta sobre la tabla [HumanResources]. [Employee] que muestre BusinessEntityID, NationalIDNumber y JobTitle, ordene los registros de mayor a menor por el campo BusinessEntityID.
+## Instrucciones TCL
+
+TCL se refiere a Transaction Control Language y se utiliza para controlar las transacciones en la base de datos. A continuación, se presentan algunos ejemplos de instrucciones TCL:
+
+BEGIN TRANSACTION: se utiliza para iniciar una transacción en la base de datos. Por ejemplo:
 
 ```sql
-SELECT
-a.BusinessEntityID, a.NationalIDNumber, a.JobTitle
-FROM
-[HumanResources]. [Employee] AS a
-ORDER BY
-a.BusinessEntityID DESC
+BEGIN TRANSACTION;
+INSERT INTO Ventas (Fecha, Producto, Cantidad, Precio) 
+VALUES ('2023-05-09', 'Monitor', 5, 300.00);
+UPDATE Ventas 
+SET Precio = 250.00 
+WHERE Producto = 'Monitor';
+COMMIT;
 ```
-## Query 5
 
-Genere una consulta sobre la tabla [HumanResources].[Employee] que muestre las JobTitle únicos, el campo JobTitle debe registrar en la consulta como Unicos.
+ROLLBACK TRANSACTION: se utiliza para deshacer una transacción y revertir los cambios realizados en caso de errores o fallas. Por ejemplo:
 
 ```sql
-SELECT  DISTINCT a.JobTitle
-FROM
-[HumanResources].[Employee] AS a
+BEGIN TRANSACTION;
+INSERT INTO Ventas (Fecha, Producto, Cantidad, Precio) 
+VALUES ('2023-05-09', 'Teclado', 10, 50.00);
+UPDATE Ventas 
+SET Precio = 40.00 
+WHERE Producto = 'Teclado';
+ROLLBACK;
 ```
 
-## Query 6
+## Instrucciones DCL
 
-Genere una consulta para todos los campos de la tabla [HumanResources]. [Employee] donde el BusinessEntityID sea mayor a 10.
+DCL se refiere a Data Control Language y se utiliza para definir los permisos y la seguridad en la base de datos. A continuación, se presentan algunos ejemplos de instrucciones DCL:
+
+GRANT: se utiliza para otorgar permisos a usuarios y roles de usuario en la base de datos. Por ejemplo:
 
 ```sql
-SELECT
-*
-FROM
-[HumanResources]. [Employee] AS a
-WHERE
-a.BusinessEntityID > 10
+GRANT SELECT, INSERT, UPDATE ON Ventas TO Vendedor;
 ```
+Con esta instrucción, se otorgan permisos SELECT, INSERT y UPDATE sobre la tabla "Ventas" al usuario "Vendedor". Esto permite al usuario realizar consultas, insertar nuevos registros y actualizar registros existentes en la tabla "Ventas".
 
-## Query 7
-
-Genere una consulta de todos los campos para la tabla [HumanResources]. [Employee] donde el JobTitle sea Sales Representative y el Gender F.
+DENY: se utiliza para denegar permisos a usuarios y roles de usuario en la base de datos. Por ejemplo:
 
 ```sql
-SELECT
-*
-FROM
-[HumanResources]. [Employee] AS a
-WHERE
-a.JobTitle = 'Sales Representative' AND a.Gender = 'F'
+DENY DELETE ON Ventas TO Vendedor;
 ```
+Con esta instrucción, se deniega el permiso DELETE sobre la tabla "Ventas" al usuario "Vendedor". Esto impide que el usuario elimine registros existentes en la tabla "Ventas".
 
-## Query 8
-
-Genere una consulta que permita obtener la cantidad por JobTitle. La consulta debe mostrar el campo JobTitle seguido de la cantidad que hay por dicho JobTitle, ordene de mayor a menor.
+REVOKE: se utiliza para revocar permisos otorgados anteriormente a usuarios y roles de usuario en la base de datos. Por ejemplo:
 
 ```sql
-SELECT
-a.JobTitle,
-COUNT(a.JobTitle) AS Cantidad
-FROM
-[HumanResources]. [Employee] AS a
-GROUP BY
-a.JobTitle
-ORDER BY
-COUNT(a.JobTitle) DESC
+REVOKE SELECT ON Ventas FROM Analista;
 ```
 
-## Query 9
+Con esta instrucción, se revoca el permiso SELECT sobre la tabla "Ventas" al usuario "Analista". Esto impide que el usuario realice consultas sobre la tabla "Ventas".
 
-Realice una consulta de la tabla [HumanResources]. [Employee] la cual indique el promedio del campo VacationHours donde el JobTitle sea Production Technician - WC50, el campo resultante del promedio debe llamarse Promedio.
+CREATE LOGIN: se utiliza para crear un nuevo inicio de sesión de usuario en la instancia de SQL Server. Por ejemplo:
 
 ```sql
-SELECT AVG (a.VacationHours) AS Promedio
-FROM
-[HumanResources]. [Employee] AS a
-WHERE
-a.JobTitle = 'Production Technician - WC50'
+CREATE LOGIN Vendedor WITH PASSWORD = 'P@ssw0rd';
 ```
 
-## Query 10
+Con esta instrucción, se crea un nuevo inicio de sesión de usuario llamado "Vendedor" con la contraseña "P@ssw0rd".
 
-Realice una consulta de la tabla [Sales]. [SalesPerson] la cual indique la suma total del campo SalesYTD, el nuevo campo resultante debe llamarse SumaTotal.
+DROP LOGIN: se utiliza para eliminar un inicio de sesión de usuario existente en la instancia de SQL Server. Por ejemplo:
 
 ```sql
-SELECT SUM(a.SalesYTD) AS SumaTotal
-FROM
-[Sales]. [SalesPerson] AS a
+DROP LOGIN Vendedor;
 ```
 
-## Query 11
+Con esta instrucción, se elimina el inicio de sesión de usuario llamado "Vendedor".
 
-Realice una consulta de la tabla [Sales]. [SalesPerson] la cual indique la suma total del campo SalesYTD donde el campo TerritoryID no sea NULL, el nuevo campo resultante debe llamarse SumaTotal.
+Estos son solo algunos ejemplos de instrucciones DCL en SQL Server. La gestión de permisos y la seguridad son fundamentales en cualquier proyecto de bases de datos, por lo que es importante conocer bien estas instrucciones y cómo aplicarlas correctamente.
 
-```sql
-SELECT SUM(a.SalesYTD) AS SumaTotal
-FROM
-[Sales]. [SalesPerson] AS a
-WHERE
-aTerritoryID IS NOT NULL
-```
+## Conclusion
 
-## Query 12
-
-Genere una consulta a la tabla [Sales]. [SalesPerson] que indique el valor máximo y el valor mínimo del campo Bonus, los nuevos campos deben llamarse maximo y minimo respectivamente.
-
-```sql
-SELECT
-MAX(Bonus) AS Maximo,
-MIN(Bonus) AS Minimo
-FROM
-[Sales]. [SalesPerson]
-```
+Esperamos que estos ejemplos de scripts de SQL Server utilizando instrucciones DML, DDL, TCL y DCL sean útiles para tus proyectos de bases de datos. Para obtener más información y ejemplos, consulta la documentación oficial de SQL Server de Microsoft.
