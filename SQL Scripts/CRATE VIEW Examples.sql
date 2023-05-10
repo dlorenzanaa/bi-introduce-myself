@@ -35,3 +35,14 @@ SELECT o.Id, o.CustomerId, o.OrderDate, o.OrderAmount, o.OrderStatus, o.PaymentM
 FROM Orders o
 JOIN Customers c ON o.CustomerId = c.Id
 WHERE o.OrderStatus = 'Pending' AND o.ShippingMethod IS NOT NULL;
+
+
+CREATE VIEW VW_DeliveryHistory_BI 
+AS 
+SELECT d.Id, d.OrderId, d.DeliveryDate, d.DeliveryAddress, d.DeliveryStatus, d.DeliveryMethod,
+       o.OrderAmount, o.ShippingAddress, o.BillingAddress, o.TaxAmount,
+       c.FirstName, c.LastName, c.Email, c.PhoneNumber, c.AddressLine1, c.AddressLine2,
+       c.City, c.State, c.PostalCode
+FROM Deliveries d
+JOIN Orders o ON d.OrderId = o.Id
+JOIN Customers c ON o.CustomerId = c.Id;
