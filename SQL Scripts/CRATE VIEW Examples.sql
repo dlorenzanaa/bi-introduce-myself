@@ -26,3 +26,12 @@ FROM Customers c
 JOIN (SELECT CustomerId, SUM(OrderAmount) AS TotalSpent FROM Orders GROUP BY CustomerId) o
 ON c.Id = o.CustomerId;
 
+
+CREATE VIEW VW_OrdersPendingDelivery_BI 
+AS 
+SELECT o.Id, o.CustomerId, o.OrderDate, o.OrderAmount, o.OrderStatus, o.PaymentMethod,
+       c.FirstName, c.LastName, c.Email, c.PhoneNumber, c.AddressLine1, c.AddressLine2,
+       c.City, c.State, c.PostalCode
+FROM Orders o
+JOIN Customers c ON o.CustomerId = c.Id
+WHERE o.OrderStatus = 'Pending' AND o.ShippingMethod IS NOT NULL;
