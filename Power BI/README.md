@@ -3,7 +3,7 @@
 Este repositorio contiene un Dashboard implementado con fórmulas DAX (Data Analysis Expressions). El objetivo de este Dashboard es proporcionar una herramienta de visualización de datos que aprovecha las potentes capacidades de DAX para el análisis y cálculo de métricas.
 
 <p align="center">
-  <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX%20_Medidas.png" width="300" alt="Logo">
+  <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX%20_Medidas.png" width="800" alt="Logo">
 </p>
 
 
