@@ -2,10 +2,6 @@
 
 Este repositorio contiene un Dashboard implementado con fórmulas DAX (Data Analysis Expressions). El objetivo de este Dashboard es proporcionar una herramienta de visualización de datos que aprovecha las potentes capacidades de DAX para el análisis y cálculo de métricas.
 
-<p align="center">
-  <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX%20_Medidas.png" width="auto" alt="Logo">
-</p>
-
 
 ## Sobre el Dashboard
 
@@ -36,6 +32,13 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 * TOOLTIP: TOOLTIP es una función que se utiliza para definir información adicional que se muestra al pasar el cursor sobre un elemento gráfico. Es útil para proporcionar detalles o contexto adicional sobre los datos mostrados en el Dashboard.
 
 * FORECAST: La función FORECAST realiza un cálculo de pronóstico basado en un modelo predictivo y devuelve una estimación de un valor futuro. Es útil para realizar predicciones y proyecciones basadas en datos históricos.
+
+
+<p align="center">
+  <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX%20_Medidas.png" width="auto" alt="Logo">
+</p>
+
+
 
 
 
