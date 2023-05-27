@@ -27,8 +27,6 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 
 * SWITCH: La función SWITCH evalúa una expresión y devuelve un resultado correspondiente a uno de los casos definidos. Es útil para realizar múltiples evaluaciones y seleccionar una opción específica según el resultado.
 
-* AVERAGE: La función AVERAGE calcula el promedio de un conjunto de valores. Es útil para obtener el promedio de una columna o medida en particular.
-
 * TOOLTIP: TOOLTIP es una función que se utiliza para definir información adicional que se muestra al pasar el cursor sobre un elemento gráfico. Es útil para proporcionar detalles o contexto adicional sobre los datos mostrados en el Dashboard.
 
 * FORECAST: La función FORECAST realiza un cálculo de pronóstico basado en un modelo predictivo y devuelve una estimación de un valor futuro. Es útil para realizar predicciones y proyecciones basadas en datos históricos.
