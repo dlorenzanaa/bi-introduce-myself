@@ -7,5 +7,7 @@ Este repositorio contiene un Dashboard implementado con fórmulas DAX (Data Anal
 
 Aquí tienes una breve descripción de las funciones utilizadas en este Dashboard con fórmulas DAX:
 
+* CALCULATE: La función CALCULATE permite modificar el contexto de evalución de una expresión en DAX. Es útil para aplicar filtros y condiciones a las fórmulas y realizar cálculos condicionales.
+* 
 
 
