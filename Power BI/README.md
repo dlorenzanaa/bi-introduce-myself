@@ -7,9 +7,29 @@ Este repositorio contiene un Dashboard implementado con fórmulas DAX (Data Anal
 
 Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada una de ellas tiene un propósito específico y se emplea para realizar diferentes tipos de cálculos y análisis de datos:
 
-* CALCULATE: La función CALCULATE permite modificar el contexto de evalución de una expresión en DAX. Es útil para aplicar filtros y condiciones a las fórmulas y realizar cálculos condicionales.
+* MEDIDAS: Las medidad en DAX se crean usando funciones y operadores para realizar operaciones mátematicas, estadísticas y de resumen en los valores de una columna o conjunto de datos. Estas medidas permiten calcular métricas Totales, promedios, porcentajes y otros cálculos agrgados que proporcionan  información valiosa sobre los datos subyacentes.
+
+* DIVIDE: La función DIVIDE se utiliza para realizar una división en DAX. Toma dos argumentos y devuelve el cociente de la división del primer argumento por el segundo argumento. También permite especificar un valor opcional para mostrar en caso de que el divisor sea cero, evitando errores.
+
+* SUM: La función SUM se utiliza para sumar los valores numéricos de una columna o expresión en una tabla o contexto determinado. Suma los valores de todas las filas que satisfacen las condiciones especificadas.
+
+* AVERAGE: La función AVERAGE se utiliza para calcular el promedio de los valores numéricos de una columna o expresión en una tabla o contexto específico. Suma todos los valores y los divide por el número total de filas que cumplen las condiciones dadas.
+
+* COUNT: La función COUNT se utiliza para contar el número de filas en una tabla o expresión que cumplen ciertas condiciones. Cuenta el número de filas no nulas en la columna o expresión especificada.
+
+* DISCOUNT: La función DISCOUNT se utiliza para aplicar un descuento a un valor. Toma un valor y un porcentaje de descuento como argumentos y devuelve el valor después de aplicar el descuento.
+
+* COUNTA: La función COUNTA se utiliza para contar el número de valores no nulos en una columna o expresión. Cuenta tanto los valores numéricos como los valores de texto, excluyendo las filas vacías.
+
+* COUNTROWS: La función COUNTROWS se utiliza para contar el número de filas en una tabla o expresión. Cuenta todas las filas, incluidas las filas vacías y las filas duplicadas.
+
+* COUNTBLANK: La función COUNTBLANK se utiliza para contar el número de filas en una columna o expresión que están en blanco. Cuenta las filas que no tienen ningún valor o tienen un valor nulo.
+
+* DISTINCTCOUNT: La función DISTINCTCOUNT se utiliza para contar el número de valores distintos en una columna o expresión. Cuenta solo los valores únicos y elimina los duplicados.
 
 * SUMX: La función SUMX realiza una suma iterativa de una expresión evaluada para cada fila de una tabla o una expresión de tabla. Es útil para calcular la suma de valores en un conjunto de datos que puede variar según diferentes condiciones.
+
+* CALCULATE: La función CALCULATE permite modificar el contexto de evalución de una expresión en DAX. Es útil para aplicar filtros y condiciones a las fórmulas y realizar cálculos condicionales.
 
 * DATESYTD: La función DATESYTD devuelve un conjunto de fechas que representa el periodo desde el inicio del año hasta una fecha específica. Es útil para realizar cálculos acumulativos o comparativos en el año en curso.
 
