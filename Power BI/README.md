@@ -7,9 +7,11 @@ Este repositorio contiene un Dashboard implementado con fórmulas DAX (Data Anal
 
 Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada una de ellas tiene un propósito específico y se emplea para realizar diferentes tipos de cálculos y análisis de datos:
 
-* CALCULATE: La función CALCULATE permite modificar el contexto de evalución de una expresión en DAX. Es útil para aplicar filtros y condiciones a las fórmulas y realizar cálculos condicionales.
+* MEDIDAS: Las medidad en DAX se crean usando funciones y operadores para realizar operaciones mátematicas, estadísticas y de resumen en los valores de una columna o conjunto de datos. Estas medidas permiten calcular métricas Totales, promedios, porcentajes y otros cálculos agrgados que proporcionan  información valiosa sobre los datos subyacentes.
 
 * SUMX: La función SUMX realiza una suma iterativa de una expresión evaluada para cada fila de una tabla o una expresión de tabla. Es útil para calcular la suma de valores en un conjunto de datos que puede variar según diferentes condiciones.
+
+* CALCULATE: La función CALCULATE permite modificar el contexto de evalución de una expresión en DAX. Es útil para aplicar filtros y condiciones a las fórmulas y realizar cálculos condicionales.
 
 * DATESYTD: La función DATESYTD devuelve un conjunto de fechas que representa el periodo desde el inicio del año hasta una fecha específica. Es útil para realizar cálculos acumulativos o comparativos en el año en curso.
 
