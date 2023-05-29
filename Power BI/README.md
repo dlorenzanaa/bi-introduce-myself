@@ -53,7 +53,7 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 
 
 
-## En la pagina de "Medidas" en esta pagina del Dashboard encontraremos las siguientes formulas DAX:
+## En la página "Medidas" del Dashboard encontraremos las siguientes fórmulas DAX:
 
  1. Ratio Devoluciones = DIVIDE([Cantidad Devoluciones] , [Cantidad Ventas] , 0)
  2. Cantidad Devoluciones = SUM(FactSales[ReturnQuantity])
@@ -66,6 +66,9 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
  9. Cantidad Regiones en Blanco = COUNTBLANK(DimGeography[RegionCountryName])
  10. Cantidad Regiones Unicas = DISTINCTCOUNT(DimGeography[RegionCountryName])
 
+## En la Página "CALCULATE" encontraremos las siguientes fórmulas DAX:
+
+1.
 
 <p align="center">
   <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX%20_Medidas.png" width="auto" alt="Logo">
