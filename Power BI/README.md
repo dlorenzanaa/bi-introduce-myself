@@ -136,11 +136,22 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 
 
 
-## En la página "LY" encontraremos las siguientes fórmulas:
+## En la página "LM" encontraremos las siguientes fórmulas:
 
 1. Total Ingresos LM = CALCULATE([Total Ingresos], DATEADD(DimCalendar[DateKey], -1,MONTH))
 
 
 <p align="center">
   <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX_LM.png" width="auto" alt="Logo">
+</p>
+
+
+## En la página "Dcto" encontraremos las siguientes fórmulas:
+
+1. Total Ingresos sin Dcto = SUMX(FactSales, FactSales[Cantidad Total] * RELATED(DimProduct[UnitPrice]))
+
+
+
+<p align="center">
+  <img src="" width="auto" alt="Logo">
 </p>
