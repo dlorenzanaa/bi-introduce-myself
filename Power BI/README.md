@@ -51,6 +51,8 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 
 * FORECAST: La función FORECAST realiza un cálculo de pronóstico basado en un modelo predictivo y devuelve una estimación de un valor futuro. Es útil para realizar predicciones y proyecciones basadas en datos históricos.
 
+1. En la pagina de "Medidas" en esta pagina del Dashboard encontraremos las siguientes formulas DAX:
+
 
 <p align="center">
   <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX%20_Medidas.png" width="auto" alt="Logo">
