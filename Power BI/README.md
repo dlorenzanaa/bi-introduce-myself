@@ -51,7 +51,10 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 
 * FORECAST: La función FORECAST realiza un cálculo de pronóstico basado en un modelo predictivo y devuelve una estimación de un valor futuro. Es útil para realizar predicciones y proyecciones basadas en datos históricos.
 
+
+
 1. En la pagina de "Medidas" en esta pagina del Dashboard encontraremos las siguientes formulas DAX:
+ * Ratio Devoluciones = DIVIDE([Cantidad Devoluciones] , [Cantidad Ventas] , 0)
 
 
 <p align="center">
