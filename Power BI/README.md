@@ -67,6 +67,7 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
  10. Cantidad Regiones Unicas = DISTINCTCOUNT(DimGeography[RegionCountryName])
 
 
+
 <p align="center">
   <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX%20_Medidas.png" width="auto" alt="Logo">
 </p>
@@ -75,6 +76,16 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 ## En la Página "CALCULATE" encontraremos las siguientes fórmulas DAX:
 
 1. Total Ordenes = COUNTROWS(FactSales)
+2. ALL Total Ordenes = CALCULATE([Total Ordenes], ALL(FactSales))
+3. % Ordenes Devueltas = DIVIDE([Total Ordenes Devueltas] , [ALL Total Ordenes])
+4. ALL Total Ordenes = CALCULATE([Total Ordenes], ALL(FactSales))
+5. PU Promedio = AVERAGE(DimProduct[UnitPrice])
+6. PU Promedio General = CALCULATE([PU Promedio], ALL(DimProduct))
+7. Total Ordenes = COUNTROWS(FactSales)
+8. Total Ordenes Devueltas = CALCULATE([Total Ordenes] , FactSales[ReturnQuantity] > 0 )
+9. Total Ordenes PU Alto = CALCULATE([Total Ordenes], FILTER( DimProduct, DimProduct[UnitPrice] > [PU Promedio General]))
+
+
 
 <p align="center">
   <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX%20_CALCULATE.png" width="auto" alt="Logo">
