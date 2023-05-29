@@ -66,16 +66,15 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
  9. Cantidad Regiones en Blanco = COUNTBLANK(DimGeography[RegionCountryName])
  10. Cantidad Regiones Unicas = DISTINCTCOUNT(DimGeography[RegionCountryName])
 
-## En la Página "CALCULATE" encontraremos las siguientes fórmulas DAX:
-
-1.
 
 <p align="center">
   <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX%20_Medidas.png" width="auto" alt="Logo">
 </p>
 
 
+## En la Página "CALCULATE" encontraremos las siguientes fórmulas DAX:
 
+1. Total Ordenes = COUNTROWS(FactSales)
 
 <p align="center">
   <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX%20_CALCULATE.png" width="auto" alt="Logo">
