@@ -122,6 +122,11 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 
 
 
+## En la página "LY" encontraremos las siguientes fórmulas:
+
+1. Total Ingresos LY = CALCULATE([Total Ingresos], SAMEPERIODLASTYEAR(DimCalendar[DateKey]))
+2. Total Ingresos Variacion LY = [Total Ingresos] - [Total Ingresos LY]
+
 
 
 <p align="center">
@@ -129,3 +134,8 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 </p>
 
 
+
+
+<p align="center">
+  <img src="" width="auto" alt="Logo">
+</p>
