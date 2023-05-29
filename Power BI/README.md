@@ -59,7 +59,9 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
  
  1. Cantidad Devoluciones = SUM(FactSales[ReturnQuantity])
  
- 1. Cantidad Devoluciones = SUM(FactSales[ReturnQuantity])
+ 1. Cantidad Ventas = SUM(FactSales[SalesQuantity])
+ 
+ 1. PU Promedio = AVERAGE(DimProduct[UnitPrice])
 
 
 <p align="center">
