@@ -111,6 +111,8 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 ## En la página "YTD" encontraremos las siguientes fórmulas:
 
 1. YTD Ingresos = CALCULATE([Total Ingresos], DATESYTD(DimCalendar[DateKey]))
+2. YTD Ingresos 2 = TOTALYTD([Total Ingresos], DimCalendar[DateKey])
+3. MTD Ingresos = TOTALMTD([Total Ingresos], DimCalendar[DateKey])
 
 
 
