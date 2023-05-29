@@ -62,6 +62,14 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
  1. Cantidad Ventas = SUM(FactSales[SalesQuantity])
  
  1. PU Promedio = AVERAGE(DimProduct[UnitPrice])
+ 
+ 1. Cantidad Tiendas = COUNT(DimStores[StoreKey])
+ 
+ 1. Cantidad Tiendas con Ventas = DISTINCTCOUNT(FactSales[StoreKey])
+ 2. Cantidad Regiones = COUNTA(DimGeography[RegionCountryName])
+ 3. Cantidad Regiones 2 = COUNTROWS(DimGeography)
+ 4. Cantidad Regiones en Blanco = COUNTBLANK(DimGeography[RegionCountryName])
+ 5. Cantidad Regiones Unicas = DISTINCTCOUNT(DimGeography[RegionCountryName])
 
 
 <p align="center">
