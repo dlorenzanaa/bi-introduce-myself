@@ -73,6 +73,7 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 </p>
 
 
+
 ## En la Página "CALCULATE" encontraremos las siguientes fórmulas:
 
 1. Total Ordenes = COUNTROWS(FactSales)
@@ -94,14 +95,22 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 </p>
 
 
+
 ## En la página "SUMX" encontraremos la siguiente fórmula:
 
 1. Total Ingresos = SUMX(FactSales, FactSales[Cantidad Total] * RELATED(DimProduct[UnitPrice]) * (1 - FactSales[Descuento]))
 
 
+
 <p align="center">
   <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX_SUMX.png" width="auto" alt="Logo">
 </p>
+
+
+
+## En la página "YTD" encontraremos las siguientes fórmulas:
+
+1. YTD Ingresos = CALCULATE([Total Ingresos], DATESYTD(DimCalendar[DateKey]))
 
 
 
