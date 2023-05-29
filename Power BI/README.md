@@ -84,6 +84,8 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 7. Total Ordenes = COUNTROWS(FactSales)
 8. Total Ordenes Devueltas = CALCULATE([Total Ordenes] , FactSales[ReturnQuantity] > 0 )
 9. Total Ordenes PU Alto = CALCULATE([Total Ordenes], FILTER( DimProduct, DimProduct[UnitPrice] > [PU Promedio General]))
+10. Total Ordenes Devueltas Multiples = CALCULATE( [Total Ordenes], FactSales[Tipo Devolucion] = "Multiple")
+11. Total Ordenes Devueltas Multiples FILTER = CALCULATE([Total Ordenes] , FILTER(FactSales,FactSales[Tipo Devolucion] =  "Multiple"))
 
 
 
@@ -93,6 +95,11 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 
 
 
+
+
+<p align="center">
+  <img src="" width="auto" alt="Logo">
+</p>
 
 
 
