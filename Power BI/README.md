@@ -55,9 +55,11 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 
 ## En la pagina de "Medidas" en esta pagina del Dashboard encontraremos las siguientes formulas DAX:
 
- 1.- Ratio Devoluciones = DIVIDE([Cantidad Devoluciones] , [Cantidad Ventas] , 0)
- 1.- Cantidad Devoluciones = SUM(FactSales[ReturnQuantity])
- 1.- Cantidad Devoluciones = SUM(FactSales[ReturnQuantity])
+ 1.Ratio Devoluciones = DIVIDE([Cantidad Devoluciones] , [Cantidad Ventas] , 0)
+ 
+ 1. Cantidad Devoluciones = SUM(FactSales[ReturnQuantity])
+ 
+ 1. Cantidad Devoluciones = SUM(FactSales[ReturnQuantity])
 
 
 <p align="center">
