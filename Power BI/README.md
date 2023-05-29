@@ -53,7 +53,7 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 
 
 
-## En la página "Medidas" del Dashboard encontraremos las siguientes fórmulas DAX:
+## En la página "Medidas" del Dashboard encontraremos las siguientes fórmulas:
 
  1. Ratio Devoluciones = DIVIDE([Cantidad Devoluciones] , [Cantidad Ventas] , 0)
  2. Cantidad Devoluciones = SUM(FactSales[ReturnQuantity])
@@ -73,7 +73,7 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 </p>
 
 
-## En la Página "CALCULATE" encontraremos las siguientes fórmulas DAX:
+## En la Página "CALCULATE" encontraremos las siguientes fórmulas:
 
 1. Total Ordenes = COUNTROWS(FactSales)
 2. ALL Total Ordenes = CALCULATE([Total Ordenes], ALL(FactSales))
@@ -94,7 +94,9 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 </p>
 
 
+## En la página "SUMX" encontraremos la siguiente fórmula:
 
+1. Total Ingresos = SUMX(FactSales, FactSales[Cantidad Total] * RELATED(DimProduct[UnitPrice]) * (1 - FactSales[Descuento]))
 
 
 <p align="center">
