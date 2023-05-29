@@ -165,27 +165,25 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
  IF(HASONEVALUE(DimStores[Tienda]),
  
  SWITCH( TRUE(),
-[Rank Ingresos Tiedas] <= 10 , "Top 10",
-[Rank Ingresos Tiedas] <= 25 , "Sobresaliente",
-[Rank Ingresos Tiedas] <= 50 , "Bueno",
-[Rank Ingresos Tiedas] <= 100, "Regular",
-"Incompetente"),BLANK()
- )
+ [Rank Ingresos Tiedas] <= 10 , "Top 10",
+ [Rank Ingresos Tiedas] <= 25 , "Sobresaliente",
+ [Rank Ingresos Tiedas] <= 50 , "Bueno",
+ [Rank Ingresos Tiedas] <= 100, "Regular",
+ "Incompetente"),BLANK()
+  )
 3. Rank Ingresos Tiendas Cat Unichar = 
 
-VAR star = "⭐️"
-VAR star0 = UNICHAR(9734)
-RETURN
-
-
- IF(HASONEVALUE(DimStores[Tienda]),
- 
- SWITCH( TRUE(),
-[Rank Ingresos Tiedas] <= 10 , REPT(star,5),
-[Rank Ingresos Tiedas] <= 25 , REPT(star,4) & REPT(star0,1),
-[Rank Ingresos Tiedas] <= 50 , REPT(star,3) & REPT(star0,2),
-[Rank Ingresos Tiedas] <= 100, REPT(star,2) & REPT(star0,3),
-REPT(star,1) & REPT(star0,4)),BLANK()
+ VAR star = "⭐️"
+ VAR star0 = UNICHAR(9734)
+ RETURN
+  IF(HASONEVALUE(DimStores[Tienda]),
+   SWITCH( TRUE(),
+ [Rank Ingresos Tiedas] <= 10 , REPT(star,5),
+ [Rank Ingresos Tiedas] <= 25 , REPT(star,4) & REPT(star0,1),
+ [Rank Ingresos Tiedas] <= 50 , REPT(star,3) & REPT(star0,2),
+ [Rank Ingresos Tiedas] <= 100, REPT(star,2) & REPT(star0,3),
+ REPT(star,1) & REPT(star0,4)),BLANK()
  )
+ 
 
 
