@@ -197,5 +197,5 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 
 
 <p align="center">
-  <img src="" width="auto" alt="Logo">
+  <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX%20_FORECAST.png" width="auto" alt="Logo">
 </p>
