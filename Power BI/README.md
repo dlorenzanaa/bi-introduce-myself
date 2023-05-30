@@ -235,3 +235,22 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
   <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX%20_Ingresos%20P%20Tooltip.png" width="auto" alt="Logo">
 </p>
 
+
+
+## En las páginas "Tooltip 2 y Deevoluciones Tooltip" encontraremos la siguiente fórmula:
+
+1. % Ordenes Devueltas = DIVIDE([Total Ordenes Devueltas] , [ALL Total Ordenes])
+
+
+
+
+<p align="center">
+  <img src="" width="auto" alt="Logo">
+</p>
+
+
+
+<p align="center">
+  <img src="" width="auto" alt="Logo">
+</p>
+
