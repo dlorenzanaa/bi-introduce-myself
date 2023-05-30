@@ -204,9 +204,14 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 ## En la página #SCENARIO" encontraremos las siguientes fórmulas:
 
 1. PU Promedio = AVERAGE(DimProduct[UnitPrice])
+2. PU Promedio Ajuste = [PU Promedio] *  (1 +  '% Ajuste PU'[Valor de % Ajuste PU])
+3. Total Ingresos = SUMX(FactSales, FactSales[Cantidad Total] * RELATED(DimProduct[UnitPrice]) * (1 - FactSales[Descuento]))
+4. Total Ingresos Ajuste = [Total Ingresos] * (1 + '% Ajuste PU'[Valor de % Ajuste PU])
+5. Total Utilidad = [Total Ingresos] - [Total Costos]
+6. Total Utilidad Ajuste = [Total Ingresos Ajuste] - [Total Costos]
 
 
 
 <p align="center">
-  <img src="" width="auto" alt="Logo">
+  <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX%20_SCENARIO.png" width="auto" alt="Logo">
 </p>
