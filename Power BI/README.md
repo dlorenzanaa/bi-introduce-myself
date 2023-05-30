@@ -210,3 +210,10 @@ Este repositorio contiene un Dashboard implementado con fórmulas DAX (Data Anal
   <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX%20_Devoluciones%20Tooltip.png" width="auto" alt="Logo">
 </p>
 
+
+
+
+
+## Contribuciones
+
+¡Gracias por tu interés en contribuir a este repositorio! Si deseas contribuir con ejemplos adicionales de SQL Server y Power BI, por favor crea una rama y haz una solicitud de extracción. ¡Agradecemos tu ayuda!
