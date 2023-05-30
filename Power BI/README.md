@@ -175,7 +175,7 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 
 
 
-## En la página "SWITCH" encontraremos las siguiente fórmula:
+## En la página "SWITCH" encontraremos la siguiente fórmula:
 
 1.Total Selección = IF(ISCROSSFILTERED(Selector[Selección]), SWITCH(TRUE(),VALUES(Selector[Selección]) = "Total Ingresos",[Total Ingresos],VALUES(Selector[Selección]) = "Total Ingresos", [Total Costos],VALUES(Selector[Selección]) = "Total Utilidad", [Total Utilidad][Total Ingresos]),[Total Ingresos])
 
@@ -184,4 +184,18 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 
 <p align="center">
   <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX%20_SWITCH.png" width="auto" alt="Logo">
+</p>
+
+
+
+## En la página "FORECAST" encontraremos la siguiente fórmula:
+
+1. Total Utilidad = [Total Ingresos] - [Total Costos]
+
+
+
+
+
+<p align="center">
+  <img src="" width="auto" alt="Logo">
 </p>
