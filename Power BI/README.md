@@ -5,9 +5,7 @@ Este repositorio contiene un Dashboard implementado con fórmulas DAX (Data Anal
 
 ## Sobre el Dashboard
 
-* El principar objetivo es mostrar lo que se 
-
-
+* Es importante mostrar los principales calculos, análisis de datos y manipulación de los mismos de manera eficiente. Acontinuación se explica las medidas y fórmulas que se uilizaron en cada una de las páginas de este Dashboard, calculando ventas, devoluciones, precio unitario, por regiones, continetes y  tiendas de igual manera por categoria de productos y subproductos, ayudandonos de la información por fechas y años usando a nuestro favor la Data prorcionada para hacer pronósticos e identificar tendencias, como en toda empreza se manejan descuentos por temporadas lo cual ayudará saber sí se tuvieron las ventas y utilidades esperadas tomando decisiones inteligentes.
 
 
 
