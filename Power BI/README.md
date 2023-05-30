@@ -5,7 +5,7 @@ Este repositorio contiene un Dashboard implementado con fórmulas DAX (Data Anal
 
 ## Sobre el Dashboard
 
-* 
+* El principar objetivo es mostrar lo que se 
 
 
 
