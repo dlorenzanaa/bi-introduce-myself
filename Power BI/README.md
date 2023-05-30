@@ -5,9 +5,7 @@ Este repositorio contiene un Dashboard implementado con fórmulas DAX (Data Anal
 
 ## Sobre el Dashboard
 
-Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada una de ellas tiene un propósito específico y se emplea para realizar diferentes tipos de cálculos y análisis de datos:
-
-* MEDIDAS: Las medidad en DAX se crean usando funciones y operadores para realizar operaciones mátematicas, estadísticas y de resumen en los valores de una columna o conjunto de datos. Estas medidas permiten calcular métricas Totales, promedios, porcentajes y otros cálculos agrgados que proporcionan  información valiosa sobre los datos subyacentes.
+* 
 
 
 
