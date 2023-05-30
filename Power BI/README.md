@@ -215,3 +215,23 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 <p align="center">
   <img src="https://github.com/dlorenzanaa/bi-introduce-myself/blob/main/Imagenes/Dashboard%20DAX%20_SCENARIO.png" width="auto" alt="Logo">
 </p>
+
+
+
+## En las páginas "Tooltip 1 e Ingresos Productos Tooltip" encontraremos la siguiente fórmula:
+
+1. Total Ingresos = SUMX(FactSales, FactSales[Cantidad Total] * RELATED(DimProduct[UnitPrice]) * (1 - FactSales[Descuento]))
+
+
+
+
+<p align="center">
+  <img src="" width="auto" alt="Logo">
+</p>
+
+
+
+<p align="center">
+  <img src="" width="auto" alt="Logo">
+</p>
+
