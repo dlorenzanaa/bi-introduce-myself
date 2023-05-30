@@ -181,3 +181,6 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 
 
 
+<p align="center">
+  <img src="" width="auto" alt="Logo">
+</p>
