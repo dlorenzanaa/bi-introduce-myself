@@ -177,5 +177,7 @@ Estas son solo algunas de las funciones DAX utilizadas en este Dashboard. Cada u
 
 ## En la página "SWITCH" encontraremos las siguientes fórmulas:
 
+1.Total Selección = IF(ISCROSSFILTERED(Selector[Selección]), SWITCH(TRUE(),VALUES(Selector[Selección]) = "Total Ingresos",[Total Ingresos],VALUES(Selector[Selección]) = "Total Ingresos", [Total Costos],VALUES(Selector[Selección]) = "Total Utilidad", [Total Utilidad][Total Ingresos]),[Total Ingresos])
+
 
 
